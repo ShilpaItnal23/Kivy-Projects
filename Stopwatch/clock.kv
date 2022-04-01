@@ -1,0 +1,39 @@
+<MainWidget>:
+
+	# Assigning the alignment to buttons
+	BoxLayout:
+		orientation: 'vertical'
+
+		# Create Button
+
+		Button:
+			text: 'start'
+			background_color : [1, 0, 0, 1]
+			font_size : 20
+			font_style: 'comic'
+			on_press: root.start()
+
+		Button:
+			text: 'stop'
+			background_color: [0, 1, 0, 1]
+			font_size : 20
+			font_style: 'comic'
+			on_press: root.stop()
+
+		Button:
+			text: 'Reset'
+			background_color: [0, 0, 1, 1]
+			font_size : 20
+			font_style: 'comic'
+			on_press: root.number = 0
+
+	# Create the Label
+	Label:
+		text: str(round(root.number))
+		text_size: self.size
+		halign: 'center'
+		valign: 'middle'
+		font_size: 50
+		font_style: 'comic sans'
+
+
